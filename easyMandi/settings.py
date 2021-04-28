@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-fc4&!(cszk_u*!8jwqzcr$6i0&bq93#9z2uckwqj*+)n#s+g6n
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['13.233.23.103']
+ALLOWED_HOSTS = ['13.233.23.103', 'localhost']
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'corsheaders',
+    'django_filters',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
