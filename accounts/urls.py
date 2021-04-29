@@ -3,8 +3,9 @@ from . import views
 from rest_framework import routers
 
 router = routers.DefaultRouter()
-router.register(r'accounts', views.UserView)
+
 
 urlpatterns = [
-    path('', include(router.urls))
+    path('signup/', views.signupview, name='signup'),
+    path('login/', views.loginview, name='login')
 ]
