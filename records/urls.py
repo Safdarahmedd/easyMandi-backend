@@ -4,6 +4,7 @@ from rest_framework import routers
 
 router = routers.DefaultRouter()
 router.register(r'records', views.RecordView)
+router.register(r'livebid', views.LiveView)
 
 urlpatterns = [
     path('', include(router.urls))
