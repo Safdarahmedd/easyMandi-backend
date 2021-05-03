@@ -14,4 +14,4 @@ class LiveView(viewsets.ModelViewSet):
     queryset = Live.objects.all()
     serializer_class = LiveSerializer
     filter_backends = [DjangoFilterBackend]
-    filterset_fields = ['seller', 'address']
+    filterset_fields = ['seller', 'address', 'isTerminated']

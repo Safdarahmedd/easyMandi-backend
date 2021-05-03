@@ -3,7 +3,7 @@ from . import views
 from rest_framework import routers
 
 router = routers.DefaultRouter()
-router.register(r'records', views.RecordView)
+router.register(r'history', views.RecordView)
 router.register(r'livebid', views.LiveView)
 
 urlpatterns = [

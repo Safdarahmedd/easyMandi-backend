@@ -9,4 +9,4 @@ class RecordSerializer(serializers.ModelSerializer):
 class LiveSerializer(serializers.ModelSerializer):
     class Meta:
         model = Live
-        fields = ['address', 'seller']
+        fields = ['address', 'seller', 'isTerminated']

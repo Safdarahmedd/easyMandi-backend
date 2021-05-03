@@ -40,6 +40,7 @@ class LoginSerializer(serializers.BaseSerializer):
 
     def to_representation(self, instance):
         return {
+            'id' : instance.user.id,
             'firstName': instance.firstName,
             'lastName': instance.lastName, 
             'meta': instance.meta, 

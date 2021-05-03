@@ -17,6 +17,7 @@ class Record(models.Model):
 class Live(models.Model):
     address = models.CharField(max_length=100, primary_key=True)
     seller = models.ForeignKey(User, on_delete=models.CASCADE)
+    isTerminated = models.BooleanField(default=False)
 
     def __str__(self):
         return self.seller.username
