@@ -6,9 +6,15 @@ from django.contrib.auth.models import User
 from django.contrib import auth
 from .models import Profile
 from rest_framework import serializers
-from .serializers import SignupSerializer, LoginSerializer
+from .serializers import SignupSerializer, LoginSerializer, BidderSerializer
 from django_filters.rest_framework import DjangoFilterBackend
 
+
+class BidderView(viewsets.ReadOnlyModelViewSet):
+    queryset = Profile.objects.all()
+    serializer_class = BidderSerializer
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ['meta']
 
 
 @api_view(['POST',])

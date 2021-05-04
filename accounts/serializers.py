@@ -50,4 +50,7 @@ class LoginSerializer(serializers.BaseSerializer):
             'gender': instance.gender
         }
 
-    
+class BidderSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Profile
+        fields = ['firstName', 'lastName', 'meta', 'district', 'state']
